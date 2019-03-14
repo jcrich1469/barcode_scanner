@@ -28,7 +28,7 @@ the rest of the instructions involve typing inside the terminal(command line, co
 
 4. cd barcode_scanner
 
-5. pip3 install virtualenv
+5. sudo pip3 install virtualenv
 
 6. virtualenv venv
 
