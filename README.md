@@ -12,9 +12,9 @@ Laptop running ubuntu or RaspberryPi
 
 A webcam
 
-Python3, will be on any linux OS
+Python3, will be on any linux OS (Raspbian OS included on as linux)
 
-github, on  linux OS
+github, should already be on  linuxOS
 
 ### Installing
 
@@ -22,23 +22,25 @@ github, on  linux OS
 
 the rest of the instructions involve typing inside the terminal(command line, console ...)
 
-2.git clone https://github.com/jcrich1469/barcode_scanner
+2. sudo apt-get install libzbar0
 
-3.cd barcode_scanner
+3. git clone https://github.com/jcrich1469/barcode_scanner
 
-4.virtualenv venv
+4. cd barcode_scanner
 
-5.source venv/bin/activate
+5. virtualenv venv
 
-6.pip3 install -r requirements.txt
+6. source venv/bin/activate
 
-7.python3 barcode_scanner_video.py
+7. pip3 install -r requirements.txt
+
+8. python3 barcode_scanner_video.py
 ... wait for the camera to display
 
-7.1. get a barcode, it works best when it is flat and close to the camera, with a dark background.
+8.1. get a barcode, it works best when it is flat and close to the camera, with a dark background.
 should see a red rectangle and some numbers that match the numbers on the barcode.
 
-8.press "q" on the keyboard to quit and end the program.
+9.press "q" on the keyboard to quit and end the program.
 
 
 
