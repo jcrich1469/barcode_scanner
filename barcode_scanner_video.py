@@ -19,8 +19,8 @@ print("[INFO] starting video stream...")
 
 
 ### IF USING PICAMERA, COMMENT OUT THE LINE BELOW AND UNCOMMENT THE LINE BELOW THAT.
-# vs = VideoStream(src=0).start()
-vs = VideoStream(usePiCamera=True).start()
+vs = VideoStream(src=0).start()
+# vs = VideoStream(usePiCamera=True).start()
 time.sleep(2.0)
  
 # open the output CSV file for writing and initialize the set of
