@@ -6,6 +6,9 @@ import datetime
 import imutils
 import time
 import cv2
+
+# do not upload the key...
+API_KEY = "387EFFA3813F2BF26FE02BC6F6F52A11"
  
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -50,18 +53,29 @@ while True:
 		barcodeData = barcode.data.decode("utf-8")
 		barcodeType = barcode.type
  
-		# draw the barcode data and barcode type on the image
-		text = "{} ({})".format(barcodeData, barcodeType)
-		cv2.putText(frame, text, (x, y - 10),
-			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+
+        #####
+
+
+
  
 		# if the barcode text is currently not in our CSV file, write
 		# the timestamp + barcode to disk and update the set
-		if barcodeData not in found:
-			csv.write("{},{}\n".format(datetime.datetime.now(),
-				barcodeData))
-			csv.flush()
-			found.add(barcodeData)
+
+		# if barcodeData not in found:
+		# 	csv.write("{},{}\n".format(datetime.datetime.now(),
+		# 		barcodeData))
+		# 	csv.flush()
+		# 	found.add(barcodeData)
+
+        
+
+        # draw the barcode data and barcode type on the image
+		text = "{} ({})".format(barcodeData, barcodeType)
+		cv2.putText(frame, text, (x, y - 10),
+			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+
+        #####
 
 	# show the output frame
 	cv2.imshow("Barcode Scanner", frame)
