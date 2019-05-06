@@ -1,3 +1,5 @@
+# Forget the readme, if you have python3 setup properly with virtualenv etc....
+
 # barcode_scanner
 
 Barcode and QRcode scanner
